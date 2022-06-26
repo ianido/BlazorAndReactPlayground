@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-BlazorPlayGround-1F3DE3BD-C33F-40AD-AEF8-A3E115C15F68</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	
+	<JsLibraryRoot>JsLibraries\</JsLibraryRoot>
+	<DefaultItemExcludes>$(DefaultItemExcludes);$(JsLibraryRoot)node_modules\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.6" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Content Remove="$(JsLibraryRoot)**" />
+    <None Remove="$(JsLibraryRoot)**" />
+    <None Include="$(JsLibraryRoot)**" Exclude="$(JsLibraryRoot)node_modules\**" />
+  </ItemGroup>
+	
+  <Target Name="PublishRunWebpack" AfterTargets="Build">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(JsLibraryRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(JsLibraryRoot)" Command="npm run build" />
+  </Target>
+
+</Project>

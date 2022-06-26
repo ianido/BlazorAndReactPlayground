@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPlayGroundTS", "BlazorPlayGroundTS\BlazorPlayGroundTS.csproj", "{7C881BFA-9DFF-4B95-83DB-5BFEBE7B2897}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorPlayGroundJS", "BlazorPlayGroundJS\BlazorPlayGroundJS.csproj", "{EF35647B-1930-4C16-9A35-A0ABF914E3CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C881BFA-9DFF-4B95-83DB-5BFEBE7B2897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C881BFA-9DFF-4B95-83DB-5BFEBE7B2897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C881BFA-9DFF-4B95-83DB-5BFEBE7B2897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C881BFA-9DFF-4B95-83DB-5BFEBE7B2897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF35647B-1930-4C16-9A35-A0ABF914E3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF35647B-1930-4C16-9A35-A0ABF914E3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF35647B-1930-4C16-9A35-A0ABF914E3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF35647B-1930-4C16-9A35-A0ABF914E3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6093EC74-30FB-4D5D-A9A9-FE42382543CB}
+	EndGlobalSection
+EndGlobal
